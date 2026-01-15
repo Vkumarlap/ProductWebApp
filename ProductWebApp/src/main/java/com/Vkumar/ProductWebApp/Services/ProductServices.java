@@ -1,6 +1,7 @@
 package com.Vkumar.ProductWebApp.Services;
-import java.util.Arrays;
-import java.util.List;
+import java.util.ArrayList;
+
+import java.util.*;
 import org.springframework.stereotype.Service;
 import com.Vkumar.ProductWebApp.Model.Product;
 
@@ -8,11 +9,24 @@ import com.Vkumar.ProductWebApp.Model.Product;
 @Service
 public class ProductServices {
 
-    List<Product> products=Arrays.asList(new Product(101,300,"light"),new Product(102,500,"charger"));
+    List<Product> products=new ArrayList<>(Arrays.asList(new Product(101,300,"light"),new Product(102,500,"charger")));
     
-public List<Product> getProduct(){
+public List<Product> getProducts(){
 
    return products;
+}
+
+public Product getProductById(int Pid)
+{  
+
+    return products.stream()
+    .filter(p-> p.getPid()==Pid)
+    .findFirst().get();
+}
+
+public void addProduct(Product product)
+{
+     products.add(product);
 }
 
 }
