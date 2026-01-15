@@ -29,4 +29,24 @@ public void addProduct(Product product)
      products.add(product);
 }
 
+public void UpDateProduct(Product product)
+{
+    int index =0;
+    for(int i=0;i<products.size();i++)
+        if(products.get(i).getPid()==product.getPid())
+            index=i;
+
+    products.set(index,product);
+}
+
+public void deleteProduct(int productid)
+{
+    int index=0;
+    for(int i=0;i<products.size();i++)
+    if(products.get(i).getPid()==(productid))
+        index=i;
+    products.remove(index);
+
+}
+
 }

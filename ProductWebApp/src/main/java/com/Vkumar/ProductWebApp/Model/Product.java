@@ -1,8 +1,8 @@
 package com.Vkumar.ProductWebApp.Model;
 
-import javax.swing.Spring;
+// import javax.swing.Spring;
 
-import org.springframework.boot.webmvc.autoconfigure.WebMvcProperties.Apiversion.Use;
+// import org.springframework.boot.webmvc.autoconfigure.WebMvcProperties.Apiversion.Use;
 import org.springframework.stereotype.Component;
 
 @Component
