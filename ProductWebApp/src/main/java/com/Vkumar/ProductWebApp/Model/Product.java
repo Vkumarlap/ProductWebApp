@@ -1,13 +1,16 @@
 package com.Vkumar.ProductWebApp.Model;
 
 // import javax.swing.Spring;
-
 // import org.springframework.boot.webmvc.autoconfigure.WebMvcProperties.Apiversion.Use;
+
 import org.springframework.stereotype.Component;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 
 @Component
+@Entity
 public class Product {
-
+    @Id
     private int Price;
     private String Pname;
     private int Pid;
@@ -15,6 +18,7 @@ public class Product {
    Product(){
 
    } 
+   
 public Product(int Pid ,int Price,String Pname)
 {
     this.Price=Price;
